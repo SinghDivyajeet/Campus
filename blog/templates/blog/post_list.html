@@ -7,5 +7,12 @@
 <body>
 	<h1>Hi there!</h1>
 	<h3>It works.</h3>
+	{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+	{% endfor %}
 </body>
 </html>
